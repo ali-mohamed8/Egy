@@ -1,0 +1,47 @@
+######### pusher server ################
+
+- composer create project laravel/laravel 'project name' => create laravevl project
+
+- ���� ������� �� ��� ��.env
+
+-##default login and register in laravel ####
+
+- composer require laravel/ui
+
+-npm install & npm run dev
+
+{- php artisan ui bootstrab --auth ||- php artisan ui vue --auth  }
+
+php artisan migrate:install => install user model  into DB
+
+get id key secret from pusher server :
+
+PUSHER_APP_ID=1077685
+PUSHER_APP_KEY=5b2b6c5b1ec06abc343d
+PUSHER_APP_SECRET=4b6855b85186fd69b8e3
+
+#############
+@auth
+
+check if this user quthenticated or not
+@endauth
+
+############
+
+in env file make [BROADCAST_DRIVER=pusher] to react with pusher
+
+in config\broadcasting.php  =>   make options hashed because localhost
+
+######################################
+make validate in array
+
+rules(){
+return[
+'arrayName.*.name' => 'rules'     //  validate all name fields in array
+
+];
+}
+##############################
+in input attributes thar is an attr accept = 'image/*' or 'video/*' ...
+#######################################
+
